@@ -66,12 +66,14 @@ public class OrderActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+    public void onItemSelected(AdapterView<?> adapterView,
+                               View view, int i, long l) {
+        String spinnerLabel = adapterView.getItemAtPosition(i).toString();
+        displayToast(spinnerLabel);
     }
-
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
+    public void onNothingSelected (AdapterView<?> adapterView) {
 
     }
+
 }
